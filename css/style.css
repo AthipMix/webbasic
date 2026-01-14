@@ -1,0 +1,156 @@
+/* Global Style */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-padding-top: 200px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: rgb(125, 183, 234);
+}
+
+/* Component Style */
+.badge {
+  background-color: rgb(53, 161, 255);
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 3px 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 200px auto 50px;
+  padding: 20px;
+  /* background-color: rgb(0, 102, 255); */
+}
+
+pre {
+  background: #f1f1f1;
+  padding: 10px;
+  overflow-x: auto;
+  border-left: 4px solid crimson;
+  border-radius: 8px;
+}
+
+code {
+  background-color: rgb(229, 229, 229);
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.note {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: rgba(198, 198, 198, 0.08);
+  border-left: 4px solid #9d9d9d;
+  font-size: 14px;
+}
+
+.note::before {
+  content: "💡";
+}
+
+.card {
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 25px;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.card.module-1 {
+  border-top: 4px solid red;
+}
+
+.card.module-2 {
+  border-top: 4px solid orange;
+}
+
+.card.module-3 {
+  border-top: 4px solid yellow;
+}
+
+.card.module-4 {
+  border-top: 4px solid yellowgreen;
+}
+
+.card.module-5 {
+  border-top: 4px solid cyan;
+}
+
+.card.module-6 {
+  border-top: 4px solid violet;
+}
+
+/* Group 1 Style */
+.header {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 15px lightgrey;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.btn-text-link {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.btn-text-link li {
+  background-color: crimson;
+  border-radius: 50%;
+  padding: 13px 20px;
+  margin-top: 15px;
+}
+
+.btn-text-link li:hover {
+  background-color: rgb(202, 26, 26);
+  border-radius: 50%;
+  padding: 13px 20px;
+  cursor: pointer;
+}
+
+h1 {
+  color: crimson;
+}
+
+/* Group 2 Style */
+.image-small {
+  width: 100px;
+  height: auto;
+}
+.position {
+  display: flex;
+}
+.position.left {
+  justify-content: flex-start;
+}
+.position.center {
+  justify-content: center;
+}
+.position.right {
+  justify-content: flex-end;
+}
+/* Group 5 Style */
+/* Group 6 Style */
+/* Group 7 Style */
+/* Group 8 Style */
+/* Group 9 Style */
+/* Group 10 Style */
