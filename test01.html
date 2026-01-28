@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายงานผลเกรด</title>
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        background-color: rgb(125, 183, 234);
+    }
+    .container {
+        width: 900px;
+        margin: 0 auto;
+    }
+    header {
+        background-color: rgb(0, 0, 51);
+        color: white;
+        text-align: center;
+        padding: 13px;
+    }
+    footer {
+        background-color: rgb(0, 0, 51);
+        color: white;
+        text-align: center;
+        padding: 16px;
+        font-size: 16px;
+    }
+    .card1 {
+        background-color: rgb(255, 255, 255);
+        margin-bottom: 25px;
+        padding: 25px;
+        border-radius: 10px;
+        text-decoration: none;
+        margin-top: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+    .card2 {
+        background-color: rgb(255, 255, 255);
+        margin-bottom: 25px;
+        padding: 25px;
+        border-radius: 10px;
+        display: flex;
+        gap: 120px;
+    }
+    .card-profile {
+        background: linear-gradient(135deg, rgb(255, 60, 0), rgb(202, 26, 26));
+        width: 450px;
+        border-radius: 10px;
+        padding: 35px;
+        color: white;
+        margin-left: 10px;
+    }
+    .card-profile:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s;
+    }
+    a {
+        background-color: rgb(133, 180, 255);
+        color: rgb(0, 4, 123);
+        padding: 15px 25px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 16px;
+    }
+    img {
+        border-radius: 50%;
+        width: 220px;
+        height: 220px;
+    }
+    .GPA {
+        background: linear-gradient(135deg, rgb(221, 55, 4), rgb(228, 16, 16));
+        text-align: center;
+        color: white;
+        border-radius: 13px;
+        box-shadow: 0px 5px 7px 5px  lightgrey;
+        margin: 20px 0;
+        padding: 10px;
+    }
+    span {
+        color: crimson;
+    }
+    .grade {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+    }
+    code {
+        background-color: rgba(192, 192, 192, 0.505);
+        border-radius: 4px;
+        padding: 2px 4px;
+    }
+    pre {
+        margin-top: 10px;
+    }
+    a:hover {
+        transform: translateY(-10px);
+        transition: 0.2s;
+    }
+    p {
+        font-size: 24px;
+        padding: 15px 33px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>📊 รายงานผลเกรด</h1>
+    </header>
+    <div class="container">
+        <div class="card1">
+            <a href="#info">🧑‍🎓 ข้อมูลนักศึกษา</a>
+            <a href="#grade">📚 ผลการเรียน</a>
+            <a href="#contact">📞 ติดต่อ</a>
+        </div>
+        <div class="card2">
+            <div class="card-profile" id="info">
+                <h2>🧑‍🎓 Mr. Athip Poosomboon</h2><hr>
+                <pre><strong>📚รหัสนักศึกษา:</strong>      674259028</pre>
+                <pre><strong>👤ชื่อ-นามสกุล:</strong>      นายอธิป ภู่สมบูรณ์</pre>
+                <pre><strong>🎓หมู่เรียน:</strong>          67/50</pre>
+                <pre><strong>👩‍🏫อาจารย์ที่ปรึกษา:</strong>   ผู้ช่วยศาสตราจารย์ ดร. อุษณีย์ ภักดีตระกูลวงศ์</pre>
+                <pre><strong>🔗Github:</strong>          <code> https://github.com/AthipMix</code></pre>
+            </div>
+            <img src="data:image/jpg;base64,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" alt="profile">
+        </div>
+        <div class="grade" id="grade">
+            <p>📚 ปี 1 เทอม 1: <span>4.00</span></p>
+            <p>📖 ปี 1 เทอม 2: <span>3.94</span></p>
+            <p>📝 ปี 2 เทอม 1: <span>3.92</span></p>
+            
+        </div>
+        <div class="GPA" >
+            <h1>🏆เกรดเฉลี่ยสะสม: 3.94</h1>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 Webmaster by Athip Poosomboon. ID 674259028. <br>
+        💼 Nakhon Pathom Rajabhat University
+    </footer>
+</body>
+</html>
